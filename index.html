@@ -15,16 +15,20 @@
             <img src="src/img/Logo.png" alt="logo" class="logo">
             <div class="navContain">
                 <div class="dropdown">
-                    <button class="dropbtn">Productos</button>
+                    <button class="dropbtn">Productos <i class="fas fa-angle-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <div class="arrow"></div>
+                        <a href="#">Laptops</a>
+                        <a href="#">PC</a>
+                        <a href="#">Tablets</a>
+                        <a href="#">Servidores</a>
+                        <a href="#">Pantallas</a>
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button class="dropbtn">Soporte</button>
+                    <button class="dropbtn">Soporte <i class="fas fa-angle-down"></i></button>
                     <div class="dropdown-content">
+                        <div class="arrow"></div>
                         <a href="#">Link 1</a>
                         <a href="#">Link 2</a>
                         <a href="#">Link 3</a>
@@ -32,14 +36,14 @@
                 </div>
                 <a> <button class="dropbtn">Sobre nosotros</button></a>
                 <a> <button class="dropbtn">Noticias</button></a>
-                        <div class="dropdown">
-                            <button class="dropbtn"><i class="fas fa-search"></i></button>
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
-                        </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fas fa-search"></i></button>
+                    <div class="dropdown-content sd">
+                        <div class="arrow1"></div>
+                        <input type="text" name="search" id="search" class="search">
+                        <div class="iconContain"><i class="fas fa-search"></i></div>
+                    </div>
+                </div>
             </div>
         </nav>
         <div class="topbar">
@@ -60,7 +64,7 @@
                             <div style='display: flex;' >
                                 <a href=""><i class="fab fa-facebook-f"></i></a>
                                 <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="far fa-envelope"></i></a>
                             </div>
                     </div>
                 </div>
@@ -165,9 +169,34 @@
         </div>
     </section>
 
-    <footer>
+    <footer class="footer1">
         <div class="contain">
+            <div class="wrapfooter1">
+                <div class="suscribete">
+                    <label for="email"><em>Quieres mantenerte al tanto de las últimas noticias de la marca</em></label>
+                    <form action="">
+                        <input class="email" placeholder="tucorreo@coreejemplo.com.co" type="email" name="email" id="email">
+                        <input class="enviar" type="submit" value="Suscribirme">
+                    </form>
+                </div>
+                <div class="socialContain sf">
+                    <label for="">Siguenos</label>
+                    <div style='display: flex;' >
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
             
+        </div>
+    </footer>
+    <footer class="footer2">
+        <div class="contain">
+            <div class="wrapfooter2">
+                <img src="src/img/Logo.png" alt="compaq" class="logof">
+                <p><em><a href="#">Política de privacidad</a></em> | <em><a href="#">Términos y condiciones</a></em> | <em>© Todos los derechos reservados</em></p>
+            </div>
         </div>
     </footer>
 
