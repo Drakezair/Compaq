@@ -12,6 +12,10 @@ body {
     z-index: 5;
 }
 
+.movilnav {
+ display: none;
+}
+
 nav {
     background: linear-gradient(#3f3f3f,#1b1b1b);
     display: flex; 
@@ -21,6 +25,7 @@ nav {
     padding: 0 30px;
     border-bottom: 3px solid #dd0000;
 }
+
 
 .logo {
     height: 30px;
@@ -41,6 +46,16 @@ nav {
 }
 
 .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 1px solid rgb(114, 114, 114);
+    border-top: 3px solid #dd0000;
+}
+
+.dropdown-content-movil {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
@@ -107,8 +122,6 @@ nav {
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .sd { display: flex !important;}
-
-.search:focus .sd {display: flex !important;}
 
 .topbar {
     height: 20px;
@@ -338,4 +351,123 @@ form {
     color: #fff;
     text-decoration: none;
     font-size: 12px;
+}
+
+.activem {
+    display: flex !important;
+}
+
+.menu {
+    display: none;
+    top: -100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    position: fixed;
+    background: #1b1b1b;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.close {
+    background: none;
+    font-size: 40px;
+    color: #fff;
+}
+
+.subbuttons {
+    background: #3f3f3f !important;
+}
+
+@media screen and (max-width: 600px) {
+    .socialContain {
+        display: none;
+    }
+
+    .navContain {
+        display: none;
+    }
+
+    .wrap p {
+        width: 100%;
+    }
+
+    .contain {
+        width:90%;
+    }
+
+    .sf {
+        display: block !important;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .sf label {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .sf a {
+        font-size: 42px;
+    }
+
+    .wrapfooter1 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .email {
+        margin-bottom: 10px;
+        width: 97%;
+    }
+    
+    .wrapfooter2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapfooter2 p {
+        display: none
+    }
+
+    .movilpoli {
+        display: block !important;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 0 10px;
+    }
+
+    .movilnav {
+        display: flex !important;
+    }
+
+    .searchActive {
+        display: flex !important;
+    }
+
+    .sd {
+        right: -10px;
+        width: 300px;
+        
+    }
+
+    .arrow1 {
+        right: 20px;
+    }
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
 }

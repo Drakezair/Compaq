@@ -45,6 +45,17 @@
                     </div>
                 </div>
             </div>
+            <div class="navContain movilnav"> <!-- MOVIL -->
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="showsearch()"><i class="fas fa-search"></i></button>
+                    <div class="dropdown-content-movil sd" id="searchmovi">
+                        <div class="arrow1"></div>
+                        <input type="text" name="search" id="search" class="search">
+                        <div class="iconContain"><i class="fas fa-search"></i></div>
+                    </div>
+                </div>
+                <button class="dropbtn" onclick="showmenu()"><i class="fas fa-bars"></i></button>
+            </div>
         </nav>
         <div class="topbar">
             <p style='margin: 0 30px;font-size: 10px;' ><em>Home > Noticias > <span style='color:red'>Artículo</span></em></p>
@@ -196,13 +207,39 @@
             <div class="wrapfooter2">
                 <img src="src/img/Logo.png" alt="compaq" class="logof">
                 <p><em><a href="#">Política de privacidad</a></em> | <em><a href="#">Términos y condiciones</a></em> | <em>© Todos los derechos reservados</em></p>
+                <p class='movilpoli'><em><a href="#">Política de privacidad</a></em> <br> <em><a href="#">Términos y condiciones</a></em> <br> <em>© Todos los derechos reservados</em></p>
             </div>
         </div>
     </footer>
 
+    <div class="menu" id='menu'>
+        <button class="close"  onclick="hidemenu()"><i class="far fa-times-circle"></i></button>
+        <button class="accordion dropbtn">Productos <i class="fas fa-angle-down"></i></button>
+        <div class="panel">
+            <button class="dropbtn subbuttons">Laptops</button>
+            <button class="dropbtn subbuttons">PC's</button>
+            <button class="dropbtn subbuttons">Tablets</button>
+            <button class="dropbtn subbuttons">Servicios</button>
+            <button class="dropbtn subbuttons">Pantallas</button>
+        </div>
+        <button class="accordion dropbtn">Soporte <i class="fas fa-angle-down"></i></button>
+        <div class="panel">
+            <button class="dropbtn subbuttons">Link</button>
+            <button class="dropbtn subbuttons">Link</button>
+            <button class="dropbtn subbuttons">Link</button>
+        </div>
+        <a> <button class="dropbtn">Sobre nosotros</button></a>
+        <a> <button class="dropbtn">Noticias</button></a>
+    </div>
+
     <script>
         var slideIndex = 0;
+        var search = document.getElementById('searchmovi');
         showSlides();
+
+        function showsearch () {
+           search.classList.toggle('searchActive');
+        }
         
         function showSlides() {
             var i;
@@ -219,6 +256,30 @@
             slides[slideIndex-1].style.display = "block";  
             dots[slideIndex-1].className += " active";
             setTimeout(showSlides, 5000);
+        }
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        var menu = document.getElementById('menu');
+
+        function showmenu() {
+            menu.classList.add('activem');
+        }
+        function hidemenu() {
+            menu.classList.remove('activem');
         }
     </script>
 </body>
